@@ -16,6 +16,8 @@ if [ "$MYSQL_LINKED_CONTAINER" != "" ]; then
   MYSQL_PORT="${!MYSQL_PORT_VARIABLE}"
   unset MYSQL_HOST_VARIABLE
   unset MYSQL_PORT_VARIABLE
+else
+  echo "No mysql container linked!"
 fi
 
 if [ "$MYSQL_STORAGE_NAMESPACE" == "" ]; then
