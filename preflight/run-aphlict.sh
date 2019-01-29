@@ -51,6 +51,7 @@ fi
 
 if [ ! -f /is-baking ]; then
   # Start the Phabricator notification server
+  rm -f /run/watch/aphlict
   pushd /srv/phabricator/phabricator
   sudo -u "$PHABRICATOR_VCS_USER" bin/aphlict start --config=/srv/aphlict.conf
   popd
