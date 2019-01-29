@@ -1,2 +1,2 @@
-git pull --rebase || exit
-docker build -t hachque/phabricator .
+git pull --rebase 
+docker build -t redpointgames/phabricator .
